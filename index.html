@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestasi Moklet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://pbs.twimg.com/media/EzUfepgVUAILCGD?format=jpg&name=4096x4096') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            background-color: rgba(0, 123, 255, 0.8);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            flex-wrap: wrap;
+        }
+
+        .video-container, .canva-container {
+            flex: 2;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        iframe {
+            width: 90%;
+            height: 400px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            border: none;
+        }
+
+        .video-list {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+        }
+
+        .video-list button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 5px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .video-list button:hover {
+            background-color: #0056b3;
+        }
+
+        .marquee {
+            background-color: rgba(0, 123, 255, 0.8);
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            display: block;
+        }
+
+        .canva-container {
+            position: relative;
+            width: 90%;
+            height: 500px;
+            box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16);
+            border-radius: 8px;
+            overflow: hidden;
+            margin: auto;
+            background-color: white;
+            padding: 10px;
+            opacity: 0.9;
+        }
+
+        .canva-container iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .canva-link {
+            text-align: center;
+            display: block;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Prestasi Moklet</h1>
+    </header>
+
+    <div class="container">
+        <div class="video-container">
+            <iframe id="mainVideo" src="https://www.youtube.com/embed/TEgBVjbdrl0" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-list">
+            <button onclick="changeVideo('IX_I3W45-54')">Kenapa Kita Tetep Capek, Meskipun Udah Tidur Cukup?</button>
+            <button onclick="changeVideo('1T2gaG5vPk8')">Satu Kesalahan Terbesar Dalam Belaja</button>
+            <button onclick="changeVideo('RZJdvL2ofkc')">Mengapa Langit Berwarna Biru?</button>
+            <button onclick="changeVideo('YljSXjd4lnk')">Kenapa Pesawat Bisa Terbang?</button>
+            <button onclick="changeVideo('T7TRqZFVTR0')">Gimana Cara Ilmuwan Paham Bahasa Kuno?</button>
+        </div>
+    </div>
+
+    <marquee class="marquee">
+        🎉 Selamat Datang di Website Prestasi Moklet! Lihat berbagai prestasi terbaru dari siswa terbaik kami! 🔥
+    </marquee>
+
+    <div class="canva-container">
+        <p>Jika embed tidak berfungsi, klik tautan di bawah ini untuk melihat presentasi.</p>
+        <iframe src="https://www.canva.com/design/DAGc1HxtNB8/IZ1nRTTJsWLGydv3AsqCIA/view?embed" allowfullscreen></iframe>
+    </div>
+
+    <a class="canva-link" href="https://www.canva.com/design/DAGc1HxtNB8/IZ1nRTTJsWLGydv3AsqCIA/view?utm_content=DAGc1HxtNB8&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener">
+        👉 Lihat Presentasi Canva: Pink Ilustrasi Lucu Presentasi Sains
+    </a>
+
+    <script>
+        function changeVideo(videoId) {
+            let mainVideo = document.getElementById("mainVideo");
+            mainVideo.src = "https://www.youtube.com/embed/" + videoId;
+        }
+    </script>
+
+</body>
+</html>
